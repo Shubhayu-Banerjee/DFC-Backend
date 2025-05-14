@@ -1,3 +1,5 @@
+uvicorn
+fastapi
 opencv-python
 mediapipe
 numpy
