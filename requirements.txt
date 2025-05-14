@@ -1,8 +1,7 @@
-uvicorn
+uvicorn[standard]
 fastapi
 opencv-python
 mediapipe
 numpy
 tensorflow
-websockets
 scikit-learn
