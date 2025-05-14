@@ -9,6 +9,11 @@ from sklearn.preprocessing import LabelEncoder
 
 app = FastAPI()
 
+# Root endpoint
+@app.get("/")
+async def read_root():
+    return {"message": "Welcome to the DeafCeption Demo!"}
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
