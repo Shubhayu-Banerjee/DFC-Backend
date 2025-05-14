@@ -27,9 +27,8 @@ model = load_model("DCGX-D.keras")
 
 # Initialize label encoder
 label_encoder = LabelEncoder()
-label_encoder.fit([
-    'About', 'Above', 'Absent', 'Absorb', 'Accept', 'Access', 'Accident', 'Account', 'Act', 'Adult', 'Advise', 'Afternoon', 'Baby', 'Back', 'Bad', 'Bake', 'Balance', 'Ball', 'Baloon', 'Banana', 'Bank', 'Bark', 'Buy', 'Bye', 'Cake', 'Calculation', 'Call', 'Calm', 'Camera', 'Cancel', 'Candle', 'Cap', 'Car', 'Card', 'Child', 'Dance', 'Dangerous', 'Dark', 'Day', 'Deaf', 'Debt', 'Defend', 'Demand', 'Deposit', 'Desk', 'Earn', 'Eat', 'Edge', 'Egg', 'Elephant', 'Empty', 'Enemy', 'Energy', 'Equal', 'Eraser', 'Evening', 'Face', 'Fail', 'Faith', 'Fake', 'Fall', 'Family', 'Fan', 'Fat', 'Father', 'Fear', 'Female', 'Friday', 'Games(Start)', 'Games(Stop)', 'Gate(Start)', 'Gate(Stop)', 'Genuine(Start)', 'Genuine(Stop)', 'Ghee', 'Ghost', 'God(Start)', 'God(Stop)', 'Gold(Start)', 'Gold(Stop)', 'Good', 'Green', 'Grow(Start)', 'Grow(Stop)', 'Hi', 'Language', 'Me', 'Monday', 'Morning', 'Night', 'Ok', 'Please', 'Saturday', 'Sell', 'Sign', 'Sorry', 'Sunday', 'Teacher', 'Thank You', 'Thursday', 'Today', 'Tomorrow', 'Tuesday', 'Wednesday', 'Welcome', 'Yesterday', 'You'
-])
+label_encoder.fit(['Energy (Left)', 'Energy (Right)', 'Good (Left)', 'Good (Right)', 'Hi (Left)', 'Hi (Right)', 'Me (Left)', 'Me (Right)', 'Please (Left)', 'Please (Right)', 'Thank You (Left)', 'Thank You (Right)']
+                  )
 
 # Initialize MediaPipe modules
 mp_hands = mp.solutions.hands.Hands(static_image_mode=False, max_num_hands=2, min_detection_confidence=0.7, min_tracking_confidence=0.5)
