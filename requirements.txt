@@ -4,4 +4,5 @@ opencv-python
 mediapipe
 numpy
 tensorflow
+websockets
 scikit-learn
