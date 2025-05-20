@@ -33,9 +33,6 @@ with open("DCGX-ISL-Alphabet.keras_labels.json", "r") as f:
     label_list = json.load(f)
 label_encoder.fit(label_list)
 
-label_encoder.fit(['Energy (Left)', 'Energy (Right)', 'Good (Left)', 'Good (Right)', 'Hi (Left)', 'Hi (Right)', 'Me (Left)', 'Me (Right)', 'Please (Left)', 'Please (Right)', 'Thank You (Left)', 'Thank You (Right)']
-                  )
-
 # Initialize MediaPipe modules
 mp_hands = mp.solutions.hands.Hands(static_image_mode=False, max_num_hands=2, min_detection_confidence=0.7, min_tracking_confidence=0.5)
 mp_face = mp.solutions.face_detection.FaceDetection(min_detection_confidence=0.7)
