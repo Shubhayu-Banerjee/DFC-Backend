@@ -5,3 +5,4 @@ mediapipe
 numpy
 tensorflow
 scikit-learn
+json
