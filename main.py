@@ -94,3 +94,12 @@ async def websocket_endpoint(websocket: WebSocket):
             await websocket.send_text(disp_label or "No_symbol")
         except Exception as e:
             await websocket.send_text(f"Error: {str(e)}")
+from datetime import datetime
+
+@app.get("/healthz")
+@app.head("/healthz")
+async def healthcheck():
+    return {
+        "status": "#Vibing",
+        "timestamp": datetime.utcnow().isoformat()
+    }
